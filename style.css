@@ -1,0 +1,40 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Light Gray Background */
+  color: #333; /* Dark Text */
+  line-height: 1.6;
+  direction: rtl;
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.bg-light {
+  background-color: #fff; /* White */
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.bg-secondary {
+  background-color: #e0e0e0; /* Slightly Darker Gray */
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  color: #555; /* Medium Gray Title */
+}
+
