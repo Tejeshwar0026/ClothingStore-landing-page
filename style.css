@@ -349,3 +349,37 @@ header nav.open ul li {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Offers Section Styles */
+.offer-banner {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Reduced shadow */
+}
+
+.offer-banner img {
+  width: 50%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.offer-details {
+  padding: 25px; /* Slightly reduced padding */
+  text-align: right;
+}
+
+.offer-details h3 {
+  font-size: 1.8em; /* Slightly reduced font size */
+  margin-bottom: 12px; /* Slightly reduced margin */
+  color: #333;
+}
+
+.offer-details p {
+  font-size: 1em; /* Slightly reduced font size */
+  color: #666;
+  margin-bottom: 18px; /* Slightly reduced margin */
+}
