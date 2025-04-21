@@ -135,3 +135,41 @@ productCards.forEach((card) => {
     card.style.outline = "none";
   });
 });
+
+// Engaging hover/focus effects for collection cards (smoother transitions, focus state)
+const collectionCards = document.querySelectorAll(".collection-card");
+collectionCards.forEach((card) => {
+  const imageContainer = card.querySelector(".image-container");
+  const overlay = card.querySelector(".overlay");
+  const h3 = overlay.querySelector("h3");
+  const button = overlay.querySelector(".button");
+
+  card.addEventListener("mouseenter", () => {
+    if (imageContainer) imageContainer.style.transform = "scale(1.02)";
+    if (overlay) overlay.style.opacity = 1;
+    if (h3) h3.style.transform = "translateY(0)";
+    if (button) button.style.opacity = 1;
+    card.style.transition =
+      "transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out";
+  });
+  card.addEventListener("mouseleave", () => {
+    if (imageContainer) imageContainer.style.transform = "scale(1)";
+    if (overlay) overlay.style.opacity = 0;
+    if (h3) h3.style.transform = "translateY(-8px)";
+    if (button) button.style.opacity = 0;
+    card.style.transition =
+      "transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out";
+  });
+  card.addEventListener("focus-within", () => {
+    // Added focus style
+    card.style.outline = "2px solid #007bff";
+    card.style.outlineOffset = "2px";
+    if (overlay) overlay.style.opacity = 1;
+    if (h3) h3.style.transform = "translateY(0)";
+    if (button) button.style.opacity = 1;
+  });
+  card.addEventListener("blur", () => {
+    // Removed focus style on blur
+    card.style.outline = "none";
+  });
+});
