@@ -173,3 +173,11 @@ collectionCards.forEach((card) => {
     card.style.outline = "none";
   });
 });
+
+// "Tilt" effect for social icons in the footer (remains)
+VanillaTilt.init(document.querySelectorAll(".social-icons a"), {
+  max: 10, // Slightly reduced max tilt
+  speed: 300, // Slightly reduced speed
+  glare: true,
+  "max-glare": 0.4, // Slightly reduced glare
+});

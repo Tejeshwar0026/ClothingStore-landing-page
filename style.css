@@ -419,3 +419,284 @@ header nav.open ul li {
   resize: vertical;
   min-height: 120px; /* Slightly reduced min-height */
 }
+
+/* Footer Styles */
+footer {
+  background-color: #333; /* Darker footer */
+  color: #eee;
+  padding: 40px 0; /* Slightly reduced padding */
+  border-top: 1px solid #444;
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-widgets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px; /* Slightly reduced gap */
+  margin-bottom: 30px; /* Slightly reduced margin */
+}
+
+.footer-widgets .widget h3 {
+  color: #fff;
+  font-size: 1.3em; /* Slightly reduced font size */
+  margin-bottom: 12px; /* Slightly reduced margin */
+  border-bottom: 2px solid #007bff; /* Highlight color */
+  padding-bottom: 5px;
+}
+
+.footer-widgets .widget p,
+.footer-widgets .widget ul li a {
+  color: #ccc;
+  font-size: 0.9em;
+  line-height: 1.7; /* Slightly reduced line-height */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.footer-widgets .widget ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-widgets .widget ul li {
+  margin-bottom: 6px; /* Slightly reduced margin */
+}
+
+.footer-widgets .widget ul li a:hover,
+.footer-widgets .widget ul li a:focus {
+  /* Added focus state */
+  color: #007bff;
+  transform: translateX(3px); /* Reduced translation */
+}
+
+.footer-widgets .follow-us .social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #444;
+  color: #eee;
+  width: 35px; /* Slightly reduced width */
+  height: 35px; /* Slightly reduced height */
+  border-radius: 50%;
+  margin-right: 8px; /* Slightly reduced margin */
+  font-size: 1em; /* Slightly reduced font size */
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+.footer-widgets .follow-us .social-icons a:hover,
+.footer-widgets .follow-us .social-icons a:focus {
+  /* Added focus state */
+  background-color: #007bff;
+  transform: scale(1.05); /* Reduced scaling */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px; /* Slightly reduced padding */
+  border-top: 1px solid #444;
+  color: #ccc;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.footer-bottom .payment-methods img {
+  height: 20px; /* Slightly reduced height */
+  margin: 0 4px; /* Slightly reduced margin */
+  opacity: 0.6; /* Slightly reduced opacity */
+  transition: opacity 0.2s ease-in-out, transform 0.15s ease-in-out; /* Faster transition */
+}
+
+.footer-bottom .payment-methods img:hover,
+.footer-bottom .payment-methods img:focus {
+  /* Added focus state */
+  opacity: 1;
+  transform: scale(1.05); /* Reduced scaling */
+}
+
+/* Button Styles */
+.button {
+  display: inline-block;
+  padding: 10px 25px; /* Slightly reduced padding */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.2s ease, color 0.2s ease,
+    transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Faster transition */
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.button:hover,
+.button:focus {
+  /* Added focus state */
+  transform: translateY(-1px); /* Reduced translation */
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+}
+
+.primary-button {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.primary-button:hover,
+.primary-button:focus {
+  /* Added focus state */
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: #555;
+  border-color: #555;
+}
+
+.secondary-button:hover,
+.secondary-button:focus {
+  /* Added focus state */
+  background-color: #555;
+  color: #fff;
+  border-color: #555;
+}
+
+.small-button {
+  padding: 6px 12px; /* Reduced padding */
+  font-size: 0.8em; /* Reduced font size */
+}
+
+.fa-brands,
+.fab {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .section {
+    padding: 50px 0; /* Reduced padding */
+  }
+
+  .section-title {
+    font-size: 2.2em; /* Slightly reduced font size */
+    margin-bottom: 30px;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .logo {
+    margin-bottom: 10px; /* Reduced margin */
+  }
+
+  header nav {
+    display: none;
+    width: 100%;
+    margin-top: 5px; /* Reduced margin */
+  }
+
+  header nav.open {
+    display: block;
+    padding: 8px; /* Reduced padding */
+  }
+
+  header nav.open ul li {
+    margin: 8px 0; /* Reduced margin */
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    position: absolute;
+    top: 15px; /* Adjusted top position */
+    left: 15px; /* Adjusted left position */
+    color: #555;
+    font-size: 1.3em; /* Slightly reduced font size */
+  }
+
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 25px; /* Reduced margin */
+  }
+
+  .hero-content h1 {
+    font-size: 2.2em; /* Reduced font size */
+  }
+
+  .hero-content p {
+    font-size: 1em; /* Reduced font size */
+    margin-bottom: 20px; /* Reduced margin */
+  }
+
+  .hero-image {
+    order: -1;
+    margin-bottom: 20px; /* Added margin */
+  }
+
+  .offer-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .offer-banner img {
+    width: 100%;
+  }
+
+  .offer-details {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .collections-grid,
+  .products-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(220px, 1fr)
+    ); /* Further reduced min-width */
+    gap: 20px; /* Reduced gap */
+  }
+
+  .footer-widgets {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(180px, 1fr)
+    ); /* Further reduced min-width */
+    gap: 15px; /* Reduced gap */
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-bottom p {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
