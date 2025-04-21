@@ -71,3 +71,67 @@ navLinks.forEach((link) => {
     link.style.outline = "none";
   });
 });
+
+// Enhanced hover effects for buttons (subtler and smoother)
+const buttons = document.querySelectorAll(".button");
+buttons.forEach((button) => {
+  button.addEventListener("mouseenter", () => {
+    button.style.transform = "scale(1.03)";
+    button.style.boxShadow = "0 3px 7px rgba(0, 0, 0, 0.15)";
+    button.style.transition =
+      "transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out";
+  });
+  button.addEventListener("mouseleave", () => {
+    button.style.transform = "scale(1)";
+    button.style.boxShadow = "none";
+    button.style.transition =
+      "transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out";
+  });
+  button.addEventListener("focus", () => {
+    // Added focus style
+    button.style.outline = "2px solid #007bff";
+    button.style.outlineOffset = "2px";
+  });
+  button.addEventListener("blur", () => {
+    // Removed focus style on blur
+    button.style.outline = "none";
+  });
+});
+
+// Engaging hover/focus effects for product cards (smoother transitions, focus state)
+const productCards = document.querySelectorAll(".product-card");
+productCards.forEach((card) => {
+  const imageContainer = card.querySelector(".image-container");
+  const overlay = card.querySelector(".overlay");
+  const detailsLink = overlay.querySelector(".view-details");
+  const cartButton = overlay.querySelector(".add-to-cart");
+
+  card.addEventListener("mouseenter", () => {
+    if (imageContainer) imageContainer.style.transform = "scale(1.02)";
+    if (overlay) overlay.style.opacity = 1;
+    if (detailsLink) detailsLink.style.transform = "translateY(0)";
+    if (cartButton) cartButton.style.transform = "translateY(0)";
+    card.style.transition =
+      "transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out";
+  });
+  card.addEventListener("mouseleave", () => {
+    if (imageContainer) imageContainer.style.transform = "scale(1)";
+    if (overlay) overlay.style.opacity = 0;
+    if (detailsLink) detailsLink.style.transform = "translateY(20px)";
+    if (cartButton) cartButton.style.transform = "translateY(-20px)";
+    card.style.transition =
+      "transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out";
+  });
+  card.addEventListener("focus-within", () => {
+    // Added focus style
+    card.style.outline = "2px solid #007bff";
+    card.style.outlineOffset = "2px";
+    if (overlay) overlay.style.opacity = 1;
+    if (detailsLink) detailsLink.style.transform = "translateY(0)";
+    if (cartButton) cartButton.style.transform = "translateY(0)";
+  });
+  card.addEventListener("blur", () => {
+    // Removed focus style on blur (overlay remains if focused within)
+    card.style.outline = "none";
+  });
+});
