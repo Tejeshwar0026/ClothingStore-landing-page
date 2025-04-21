@@ -38,3 +38,83 @@ body {
   color: #555; /* Medium Gray Title */
 }
 
+/* Header Styles */
+header {
+  background-color: #fff;
+  padding: 15px 0; /* Reduced padding for a sleeker look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo a {
+  font-size: 1.8em;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin-right: 15px; /* Slightly reduced margin */
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #777;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus {
+  /* Added focus state for accessibility */
+  color: #007bff; /* Primary Blue */
+  transform: scale(1.03); /* Slightly less scaling */
+}
+
+.mobile-menu-icon {
+  display: none;
+  font-size: 1.5em;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu-icon:hover,
+.mobile-menu-icon:focus {
+  color: #007bff;
+}
+
+header nav.open {
+  display: block;
+  background-color: #fff; /* Ensure background on mobile */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+header nav.open ul {
+  flex-direction: column;
+  align-items: center;
+}
+
+header nav.open ul li {
+  margin: 10px 0;
+}
